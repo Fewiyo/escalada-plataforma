@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Ícono de la app: Mono en calma sobre fondo crema. Fuente para los PNG de public/icons (scripts/gen-icons.mjs). -->
+  <rect width="120" height="120" fill="#fdf1e4"/>
+  <circle cx="60" cy="112" r="40" fill="#fde4cf"/>
+  <circle cx="31.5" cy="63.5" r="10.8" fill="#e8823f"/><circle cx="31.5" cy="63.5" r="5.4" fill="#f6b48c"/>
+  <circle cx="88.5" cy="63.5" r="10.8" fill="#e8823f"/><circle cx="88.5" cy="63.5" r="5.4" fill="#f6b48c"/>
+  <circle cx="60" cy="62" r="30" fill="#e8823f"/>
+  <path d="M60 51.5 C49.5 43.4 36 51.5 40.2 64.4 C37.8 75.5 48 83.6 60 83.6 C72 83.6 82.2 75.5 79.8 64.4 C84 51.5 70.5 43.4 60 51.5Z" fill="#fde4cf"/>
+  <path d="M47.4 62.6 q4.5 3.6 9 0 M63.6 62.6 q4.5 3.6 9 0" fill="none" stroke="#3b2418" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M55.2 71.9 q4.8 4.2 9.6 0" fill="none" stroke="#3b2418" stroke-width="2.1" stroke-linecap="round"/>
+  <ellipse cx="45" cy="71" rx="3.9" ry="2.4" fill="#f59e8b" opacity=".6"/><ellipse cx="75" cy="71" rx="3.9" ry="2.4" fill="#f59e8b" opacity=".6"/>
+  <path d="M90 20 l2 4.4 4.8 .7 -3.5 3.3 .9 4.8 -4.2 -2.3 -4.2 2.3 .9 -4.8 -3.5 -3.3 4.8 -.7z" fill="#f97316"/>
+</svg>
