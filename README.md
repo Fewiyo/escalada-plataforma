@@ -14,9 +14,9 @@ Sitio de venta de **Escalada**, la app donde la gente registra sus rutas de boul
 
 En `kit/` están el afiche, los volantes y la presentación en PDF (carta, blanco y negro), cuatro imágenes para el celular y los QR. Las fuentes HTML están en `kit/fuente/`.
 
-## Formulario
+## Contacto
 
-El formulario de contacto envía los mensajes por correo con FormSubmit.
+Todo el contacto va por WhatsApp (+56 9 8829 1250) con el mensaje "Quiero conversar sobre la aplicación de escalada" ya escrito. Se quitó el formulario por correo.
 
 ## Pendiente
 
