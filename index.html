@@ -176,6 +176,15 @@ details p{margin-top:10px;color:var(--dim)}
 .cta label{display:grid;gap:4px;font-weight:800;font-size:.85rem}
 .cta input,.cta select{font:inherit;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg)}
 @media (max-width:860px){.cta{grid-template-columns:1fr}}
+.inst{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;margin-top:36px}
+.pasos{list-style:none;counter-reset:p;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pasos[hidden]{display:none}
+.pasos li{counter-increment:p;background:var(--card);border-radius:20px;padding:20px 20px 20px 70px;position:relative;display:grid;gap:4px;box-shadow:var(--sh)}
+.pasos li::before{content:counter(p);position:absolute;left:20px;top:20px;width:34px;height:34px;border-radius:50%;background:var(--o);color:#fff;font-weight:900;display:grid;place-items:center}
+.pasos span{color:var(--dim);font-size:.95rem}
+.inst__qr{display:grid;justify-items:center;gap:8px;text-align:center;background:var(--card);border-radius:var(--r);padding:20px;box-shadow:var(--sh)}
+.inst__nota{margin-top:20px;background:var(--g-s);border-radius:18px;padding:16px 20px}
+@media (max-width:820px){.inst{grid-template-columns:1fr}.pasos{grid-template-columns:1fr}.inst__qr{display:none}}
 .kit{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:36px}
 .kit__qr{background:var(--bg);border-radius:var(--r);padding:22px;display:grid;justify-items:center;gap:8px;text-align:center;width:min(280px,100%)}
 .kit__qr img{background:#fff;border-radius:12px;padding:8px}
@@ -192,7 +201,7 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
   <div class="wrap">
     <a class="brand" href="#"><img src="mono.svg" alt="">Escalada</a>
     <div class="nav__links">
-      <a href="#gimnasios">Gimnasios</a><a href="#fundaciones">Fundaciones</a><a href="#marcas">Marcas</a><a href="#precios">Planes</a><a href="#ruta">Hoja de ruta</a><a href="#kit">Kit</a>
+      <a href="#gimnasios">Gimnasios</a><a href="#fundaciones">Fundaciones</a><a href="#marcas">Marcas</a><a href="#precios">Planes</a><a href="#ruta">Hoja de ruta</a><a href="#instalar">Instalar</a><a href="#kit">Kit</a>
     </div>
     <a class="btn btn--ghost nav__app" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">Descargar app</a>
     <a class="btn btn--o" href="#contacto">Probar gratis</a>
@@ -465,6 +474,45 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
   </div>
 </section>
 
+<section class="band" id="instalar">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Instala la app</span>
+      <h2>Lista en un minuto, sin tienda de apps</h2>
+      <p class="lead">Escalada se instala desde el navegador y queda con su ícono, como cualquier app. Elige tu equipo.</p>
+      <div class="billing" role="group" aria-label="Elige tu equipo">
+        <button type="button" aria-pressed="true" data-os="android">Android</button>
+        <button type="button" aria-pressed="false" data-os="iphone">iPhone</button>
+        <button type="button" aria-pressed="false" data-os="windows">Windows</button>
+      </div>
+    </div>
+    <div class="inst">
+      <ol class="pasos" data-os="android">
+        <li><b>Abre Chrome</b><span>Entra a <a href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">escalada-xi.vercel.app</a> o escanea el QR.</span></li>
+        <li><b>Toca el menú ⋮</b><span>Los tres puntos, arriba a la derecha.</span></li>
+        <li><b>Elige “Instalar app”</b><span>Si no aparece, toca “Agregar a la pantalla principal”.</span></li>
+        <li><b>Confirma</b><span>Mono aparece en tu pantalla de inicio. Ábrela desde ahí.</span></li>
+      </ol>
+      <ol class="pasos" data-os="iphone" hidden>
+        <li><b>Abre Safari</b><span>Entra a <a href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">escalada-xi.vercel.app</a> o escanea el QR. Tiene que ser Safari.</span></li>
+        <li><b>Toca Compartir</b><span>El cuadrado con la flecha hacia arriba, abajo en la pantalla.</span></li>
+        <li><b>Elige “Agregar a pantalla de inicio”</b><span>Baja en la lista si no lo ves al tiro.</span></li>
+        <li><b>Toca “Agregar”</b><span>Ábrela siempre desde el ícono: así tus datos no se borran.</span></li>
+      </ol>
+      <ol class="pasos" data-os="windows" hidden>
+        <li><b>Abre Edge o Chrome</b><span>Entra a <a href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">escalada-xi.vercel.app</a>.</span></li>
+        <li><b>Busca el ícono de instalar</b><span>Aparece al final de la barra de direcciones: una pantalla con una flecha o un signo +.</span></li>
+        <li><b>Haz clic en “Instalar”</b><span>En Edge también está en el menú ⋯ → Aplicaciones → Instalar este sitio como aplicación.</span></li>
+        <li><b>Listo</b><span>Queda en el menú Inicio y puedes anclarla a la barra de tareas.</span></li>
+      </ol>
+      <div class="inst__qr"><img src="kit/qr-app.svg" alt="Código QR para abrir la app" width="160" height="160"><b>Escanea para abrir la app</b></div>
+    </div>
+    <div class="inst__nota">
+      <b>🔒 Tus datos quedan en tu equipo.</b> No necesitas cuenta. Para no perderlos al cambiar de teléfono, usa <b>Perfil → Respaldo de datos</b> y descarga tu respaldo.
+    </div>
+  </div>
+</section>
+
 <section class="band band--white" id="kit">
   <div class="wrap">
     <div class="center">
@@ -513,6 +561,17 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
 </footer>
 
 <script>
+
+// Instrucciones de instalación: abre la del equipo de quien visita.
+function mostrarOS(os) {
+  document.querySelectorAll('[data-os]').forEach(el => {
+    if (el.tagName === 'BUTTON') el.setAttribute('aria-pressed', el.dataset.os === os)
+    else el.hidden = el.dataset.os !== os
+  })
+}
+document.querySelectorAll('button[data-os]').forEach(b => b.addEventListener('click', () => mostrarOS(b.dataset.os)))
+const ua = navigator.userAgent
+mostrarOS(/iPhone|iPad|iPod/.test(ua) ? 'iphone' : /Android/.test(ua) ? 'android' : /Windows/.test(ua) ? 'windows' : 'android')
 
 // El formulario llega por correo vía FormSubmit.
 document.getElementById('f').addEventListener('submit', async e => {
