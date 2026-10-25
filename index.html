@@ -192,7 +192,7 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
   <div class="wrap">
     <a class="brand" href="#"><img src="mono.svg" alt="">Escalada</a>
     <div class="nav__links">
-      <a href="#gimnasios">Gimnasios</a><a href="#fundaciones">Fundaciones</a><a href="#marcas">Marcas</a><a href="#precios">Precios</a><a href="#ruta">Hoja de ruta</a><a href="#kit">Kit</a>
+      <a href="#gimnasios">Gimnasios</a><a href="#fundaciones">Fundaciones</a><a href="#marcas">Marcas</a><a href="#precios">Planes</a><a href="#ruta">Hoja de ruta</a><a href="#kit">Kit</a>
     </div>
     <a class="btn btn--ghost nav__app" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">Descargar app</a>
     <a class="btn btn--o" href="#contacto">Probar gratis</a>
@@ -383,54 +383,39 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
 <section class="band" id="precios">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Precios</span>
-      <h2>Gratis para escalar. Justo para quien construye comunidad.</h2>
-      <p class="lead">Los gimnasios parten con el primer mes gratis. Los precios están en pesos chilenos e incluyen IVA.</p>
-      <div class="billing" role="group" aria-label="Forma de pago">
-        <button type="button" aria-pressed="true" data-b="mes">Mensual</button>
-        <button type="button" aria-pressed="false" data-b="anual">Anual · 2 meses gratis</button>
-      </div>
+      <span class="eyebrow">Planes</span>
+      <h2>Gratis para escalar. Lo demás, lo conversamos.</h2>
+      <p class="lead">Estamos empezando. Preferimos armar cada acuerdo junto a cada organización, partiendo por un piloto con el primer mes gratis para gimnasios.</p>
     </div>
     <div class="plans">
       <article class="plan">
         <span class="plan__for" style="color:var(--o-d)">Escaladores</span>
         <h3>Comunidad</h3>
-        <div class="plan__price">$0</div>
-        <p class="plan__note">Siempre gratis</p>
-        <ul><li>Registro de boulder y roca</li><li>Progreso, días y lugares</li><li>Perfiles de gimnasios y sectores</li><li>Mono como compañero</li><li>Tú decides qué compartir</li></ul>
+        <div class="plan__price" style="font-size:1.7rem">Gratis</div>
+        <ul><li>Registro de boulder y roca</li><li>Tus días y tu progreso</li><li>Mono como compañero</li></ul>
         <a class="btn btn--ghost" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">Instalar la app</a>
       </article>
-      <article class="plan">
-        <span class="plan__for" style="color:#a15c00">Gimnasios</span>
-        <h3>Muro</h3>
-        <div class="plan__price" data-m="24990" data-a="249900">$24.990 <small>/mes por sede</small></div>
-        <p class="plan__note">Primer mes gratis · sin permanencia</p>
-        <ul><li>Perfil con tu marca</li><li>Rutas con nombre, tip y retiro</li><li>Eventos y clases con cupos</li><li>Dashboard esencial</li><li>Beneficio para usuarios de la app</li></ul>
-        <a class="btn btn--ghost" href="#contacto">Empezar gratis</a>
-      </article>
       <article class="plan plan--hot">
-        <span class="plan__tag">El más elegido</span>
         <span class="plan__for" style="color:#a15c00">Gimnasios</span>
-        <h3>Muro Pro</h3>
-        <div class="plan__price" data-m="44990" data-a="449900">$44.990 <small>/mes por sede</small></div>
-        <p class="plan__note">Primer mes gratis · sin permanencia</p>
-        <ul><li>Todo lo de Muro</li><li>Metas comunitarias y sorteos</li><li>Avisos segmentados</li><li>Mono con la voz de tu gimnasio</li><li>Métricas de setting y horas peak</li><li>Aprobar desafíos patrocinados y recibir el 30%</li></ul>
-        <a class="btn btn--o" href="#contacto">Empezar gratis</a>
+        <h3>Perfil de gimnasio</h3>
+        <div class="plan__price" style="font-size:1.7rem">A conversar</div>
+        <p class="plan__note">Primer mes gratis</p>
+        <ul><li>Perfil con tu nombre y horarios</li><li>Tus rutas y eventos</li><li>Información básica de uso</li></ul>
+        <a class="btn btn--o" href="#contacto">Conversemos</a>
       </article>
       <article class="plan">
         <span class="plan__for" style="color:var(--g)">Fundaciones</span>
-        <h3>Aliada</h3>
+        <h3>Fundación aliada</h3>
         <div class="plan__price" style="font-size:1.7rem">A conversar</div>
-        <p class="plan__note">Un acuerdo a la medida de cada fundación</p>
-        <ul><li>Fichas de los sectores que cuidas</li><li>Avisos y estado de rutas</li><li>Jornadas con inscripción</li><li>Donaciones sin comisión de la app</li></ul>
+        <ul><li>Ficha de los sectores que cuidas</li><li>Avisos y jornadas</li></ul>
         <a class="btn btn--ghost" href="#contacto">Conversemos</a>
       </article>
-    </div>
-    <div class="plans" style="grid-template-columns:1fr;margin-top:16px">
-      <article class="plan" style="flex-direction:row;flex-wrap:wrap;align-items:center;gap:20px">
-        <div style="flex:1 1 280px;display:grid;gap:6px"><span class="plan__for" style="color:var(--b)">Marcas</span><h3>Desafío patrocinado</h3><p class="plan__note">Una meta comunitaria con tu marca, en los gimnasios que la aprueben. El 30% va al gimnasio que la recibe.</p></div>
-        <div class="plan__price">$89.990 <small>/campaña de 4 semanas</small></div>
-        <a class="btn" href="#contacto">Hablar con nosotros</a>
+      <article class="plan">
+        <span class="plan__for" style="color:var(--b)">Marcas</span>
+        <h3>Apoyo a la comunidad</h3>
+        <div class="plan__price" style="font-size:1.7rem">A conversar</div>
+        <ul><li>Apoyar metas comunitarias en gimnasios que lo aprueben</li></ul>
+        <a class="btn btn--ghost" href="#contacto">Conversemos</a>
       </article>
     </div>
   </div>
@@ -447,7 +432,7 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
       <div class="now"><b>Hoy · App web</b><span>Registro de boulder y roca, lugares, seguridad y Mono. Se instala en el teléfono desde el navegador.</span></div>
       <div><b>Piloto con gimnasios</b><span>Primer mes gratis con 2 a 3 gimnasios. Medimos juntos cuántas personas se suman y qué les sirve.</span></div>
       <div><b>Cuentas y servidor</b><span>Inicio de sesión, perfiles de gimnasio, fundación y marca, y el aporte anónimo de rutas.</span></div>
-      <div><b>Google Play y App Store</b><span>Publicación en Android (cuenta de US$25) e iOS (US$99 al año), con notificaciones y pagos dentro de la app.</span></div>
+      <div><b>Google Play y App Store</b><span>Publicación en Android e iOS, con notificaciones.</span></div>
     </div>
   </div>
 </section>
@@ -470,11 +455,11 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
   <div class="wrap">
     <div class="center"><span class="eyebrow">Preguntas frecuentes</span><h2>Antes de sumarte</h2></div>
     <div class="faq">
-      <details><summary>¿Qué pasa después del mes gratis?</summary><p>Te avisamos una semana antes. Si quieres seguir, eliges Muro o Muro Pro. Si no, tu perfil queda en pausa y puedes volver cuando quieras.</p></details>
+      <details><summary>¿Qué pasa después del mes gratis?</summary><p>Te avisamos una semana antes. Conversamos cómo te fue y, si quieres seguir, armamos juntos un acuerdo. Si no, tu perfil queda en pausa y puedes volver cuando quieras.</p></details>
       <details><summary>¿Los escaladores tienen que pagar algo?</summary><p>No. La app es gratis para quien escala, siempre. Lo financian los gimnasios y las marcas que se suman.</p></details>
       <details><summary>¿Qué datos ve mi gimnasio?</summary><p>Solo lo que cada persona decide aportar, de forma anónima: colores, cantidades y horarios. Nunca nombres ni historiales personales.</p></details>
       <details><summary>¿Por qué no hay rankings?</summary><p>Porque queremos que cualquier persona, de cualquier nivel, se sienta parte. Las metas son de toda la comunidad.</p></details>
-      <details><summary>¿Tengo varias sedes?</summary><p>Cada sede tiene su perfil. Desde la tercera sede hay 20% de descuento.</p></details>
+      <details><summary>¿Tengo varias sedes?</summary><p>Cada sede tiene su propio perfil. Lo vemos juntos según tu caso.</p></details>
       <details><summary>¿Cuándo llega a Google Play y App Store?</summary><p>Después del piloto con gimnasios, cuando estén listas las cuentas para empresas y el servidor. Mientras tanto, se instala desde el navegador.</p></details>
     </div>
   </div>
@@ -524,18 +509,11 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
 
 <footer class="wrap">
   <span>Escalada · hecha en Chile, con Mono 🐒</span>
-  <span>Precios referenciales en CLP. Sujetos a cambios durante el piloto.</span>
+  <span>Planes en etapa piloto.</span>
 </footer>
 
 <script>
-const fmt = n => '$' + n.toLocaleString('es-CL')
-document.querySelectorAll('.billing button').forEach(b => b.addEventListener('click', () => {
-  document.querySelectorAll('.billing button').forEach(x => x.setAttribute('aria-pressed', x === b))
-  const anual = b.dataset.b === 'anual'
-  document.querySelectorAll('.plan__price[data-m]').forEach(p => {
-    p.innerHTML = anual ? `${fmt(+p.dataset.a)} <small>/año por sede</small>` : `${fmt(+p.dataset.m)} <small>/mes por sede</small>`
-  })
-}))
+
 // El formulario llega por correo vía FormSubmit.
 document.getElementById('f').addEventListener('submit', async e => {
   e.preventDefault()
