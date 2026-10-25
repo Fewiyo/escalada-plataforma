@@ -176,6 +176,13 @@ details p{margin-top:10px;color:var(--dim)}
 .cta label{display:grid;gap:4px;font-weight:800;font-size:.85rem}
 .cta input,.cta select{font:inherit;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg)}
 @media (max-width:860px){.cta{grid-template-columns:1fr}}
+.kit{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:36px}
+.kit__qr{background:var(--bg);border-radius:var(--r);padding:22px;display:grid;justify-items:center;gap:8px;text-align:center;width:min(280px,100%)}
+.kit__qr img{background:#fff;border-radius:12px;padding:8px}
+.kit__qr a{font-size:.85rem;color:var(--dim);word-break:break-all}
+.kit__list a{text-decoration:none;color:inherit}
+.kit__list em{font-style:normal;font-size:.78rem;font-weight:800;color:var(--o-d);letter-spacing:.06em;text-transform:uppercase}
+@media (max-width:860px){.nav__app{display:none}}
 footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
 </style>
 </head>
@@ -185,8 +192,9 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
   <div class="wrap">
     <a class="brand" href="#"><img src="mono.svg" alt="">Escalada</a>
     <div class="nav__links">
-      <a href="#gimnasios">Gimnasios</a><a href="#fundaciones">Fundaciones</a><a href="#marcas">Marcas</a><a href="#precios">Precios</a><a href="#ruta">Hoja de ruta</a>
+      <a href="#gimnasios">Gimnasios</a><a href="#fundaciones">Fundaciones</a><a href="#marcas">Marcas</a><a href="#precios">Precios</a><a href="#ruta">Hoja de ruta</a><a href="#kit">Kit</a>
     </div>
+    <a class="btn btn--ghost nav__app" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">Descargar app</a>
     <a class="btn btn--o" href="#contacto">Probar gratis</a>
   </div>
 </nav>
@@ -197,11 +205,11 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
     <h1>La comunidad que escala, ahora en un solo lugar</h1>
     <p class="lead">Escalada es la app donde la gente registra sus rutas de boulder y roca, acompañada por Mono. Tu gimnasio, tu fundación o tu marca tiene ahí su propio espacio para colaborar con quienes escalan.</p>
     <div class="hero__cta">
-      <a class="btn btn--o" href="#precios">Primer mes gratis</a>
-      <a class="btn btn--ghost" href="#como">Cómo funciona</a>
+      <a class="btn btn--o" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">Descargar y probar la app</a>
+      <a class="btn btn--ghost" href="#precios">Primer mes gratis</a>
     </div>
     <div class="stores">
-      <span class="store"><span><small>Disponible como</small>App web instalable</span></span>
+      <a class="store" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener" style="text-decoration:none"><span><small>Disponible ya como</small>App web instalable ↗</span></a>
       <span class="store"><span><small>Muy pronto en</small>Google Play</span></span>
       <span class="store"><span><small>Muy pronto en</small>App Store</span></span>
     </div>
@@ -390,7 +398,7 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
         <div class="plan__price">$0</div>
         <p class="plan__note">Siempre gratis</p>
         <ul><li>Registro de boulder y roca</li><li>Progreso, días y lugares</li><li>Perfiles de gimnasios y sectores</li><li>Mono como compañero</li><li>Tú decides qué compartir</li></ul>
-        <a class="btn btn--ghost" href="#contacto">Instalar la app</a>
+        <a class="btn btn--ghost" href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">Instalar la app</a>
       </article>
       <article class="plan">
         <span class="plan__for" style="color:#a15c00">Gimnasios</span>
@@ -504,6 +512,31 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
   </div>
 </section>
 
+<section class="band band--white" id="kit">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Kit para compartir</span>
+      <h2>¿Te gustó? Muéstralo a tu comunidad</h2>
+      <p class="lead">Descarga el material para imprimir o mandar por el celular. Todo lleva los códigos QR del sitio y de la app.</p>
+    </div>
+    <div class="kit">
+      <div class="kit__qr"><img src="kit/qr-app.svg" alt="Código QR para descargar la app" width="180" height="180"><b>Descarga y prueba la app</b><a href="https://escalada-xi.vercel.app/" target="_blank" rel="noopener">escalada-xi.vercel.app</a></div>
+      <div class="kit__qr"><img src="kit/qr-sitio.svg" alt="Código QR de este sitio" width="180" height="180"><b>Conoce la propuesta</b><a href="https://fewiyo.github.io/escalada-plataforma/">fewiyo.github.io/escalada-plataforma</a></div>
+    </div>
+    <div class="feats kit__list">
+      <a class="feat" href="kit/afiche.pdf" download><b>🖨️ Afiche carta</b><span>Una hoja, blanco y negro, con los dos QR. Para pegar en el muro o la recepción.</span><em>PDF · carta</em></a>
+      <a class="feat" href="kit/volantes.pdf" download><b>✂️ Volantes para recortar</b><span>Cuatro volantes por hoja carta, en blanco y negro, para repartir en mano.</span><em>PDF · carta</em></a>
+      <a class="feat" href="kit/presentacion.pdf" download><b>📄 Presentación impresa</b><span>Tres hojas: para gimnasios, fundaciones y marcas, con lo que entrega la app y los precios.</span><em>PDF · 3 hojas carta</em></a>
+      <a class="feat" href="kit/celular-1.png" download><b>📱 Para el celular</b><span>Cuatro imágenes verticales para mostrar en la pantalla o mandar por WhatsApp e Instagram.</span><em>PNG · 1080×1920</em></a>
+      <a class="feat" href="kit/celular-2.png" download><b>📱 Gimnasios</b><span>Qué le da la app a un gimnasio.</span><em>PNG · 1080×1920</em></a>
+      <a class="feat" href="kit/celular-3.png" download><b>📱 Fundaciones</b><span>Qué le da la app a una fundación.</span><em>PNG · 1080×1920</em></a>
+      <a class="feat" href="kit/celular-4.png" download><b>📱 Marcas</b><span>Cómo patrocinar metas comunitarias.</span><em>PNG · 1080×1920</em></a>
+      <a class="feat" href="kit/qr-app.png" download><b>🔳 QR de la app</b><span>En alta resolución, para agregarlo a tus propias piezas.</span><em>PNG</em></a>
+      <a class="feat" href="kit/qr-sitio.png" download><b>🔳 QR del sitio</b><span>Para agregarlo a tus propias piezas.</span><em>PNG</em></a>
+    </div>
+  </div>
+</section>
+
 <section class="wrap" id="contacto" style="padding-bottom:48px">
   <div class="cta">
     <div style="display:grid;gap:14px">
@@ -514,6 +547,7 @@ footer{padding-block:48px;color:var(--dim);font-size:.9rem;display:flex;flex-wra
       <label for="f-n">Nombre de tu organización<input id="f-n" required placeholder="Ej.: Muro del Barrio"></label>
       <label for="f-t">Soy<select id="f-t"><option>Gimnasio</option><option>Fundación</option><option>Marca</option></select></label>
       <label for="f-c">Correo<input id="f-c" type="email" required placeholder="hola@tugimnasio.cl"></label>
+      <label for="f-m">Mensaje (opcional)<input id="f-m" placeholder="Cuéntanos qué te interesa"></label>
       <button class="btn btn--o" type="submit">Quiero el mes gratis</button>
       <p id="f-ok" class="plan__note" hidden></p>
     </form>
@@ -534,13 +568,36 @@ document.querySelectorAll('.billing button').forEach(b => b.addEventListener('cl
     p.innerHTML = anual ? `${fmt(+p.dataset.a)} <small>/año por sede</small>` : `${fmt(+p.dataset.m)} <small>/mes por sede</small>`
   })
 }))
-document.getElementById('f').addEventListener('submit', e => {
+// El formulario llega por correo vía FormSubmit.
+document.getElementById('f').addEventListener('submit', async e => {
   e.preventDefault()
-  // Pendiente: conectar a un servicio de formularios (ver README).
+  const v = id => document.getElementById(id).value
   const ok = document.getElementById('f-ok')
+  const btn = e.target.querySelector('button')
+  btn.disabled = true
+  btn.textContent = 'Enviando…'
+  ok.hidden = true
+  try {
+    const r = await fetch('https://formsubmit.co/ajax/vicentecfarias@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        _subject: `Escalada · ${v('f-t')}: ${v('f-n')}`,
+        _template: 'table',
+        _captcha: 'false',
+        Organizacion: v('f-n'), Tipo: v('f-t'), Correo: v('f-c'), Mensaje: v('f-m') || '—',
+        _replyto: v('f-c'),
+      }),
+    })
+    if (!r.ok) throw new Error()
+    ok.textContent = `¡Listo, ${v('f-n')}! Te escribiremos a ${v('f-c')} para coordinar tu mes gratis.`
+    btn.textContent = 'Enviado ✓'
+  } catch {
+    ok.textContent = 'No se pudo enviar. Revisa tu conexión e inténtalo de nuevo.'
+    btn.disabled = false
+    btn.textContent = 'Quiero el mes gratis'
+  }
   ok.hidden = false
-  ok.textContent = `Gracias, ${document.getElementById('f-n').value}. Te escribiremos a ${document.getElementById('f-c').value} para coordinar tu mes gratis.`
-  e.target.querySelector('button').disabled = true
 })
 </script>
 </body>

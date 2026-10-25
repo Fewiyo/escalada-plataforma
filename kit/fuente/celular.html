@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Escalada para el celular</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Nunito:wght@600;800;900&display=swap">
+<style>
+/* Imágenes verticales 1080×1920 para mostrar en el teléfono o mandar por chat. ?n=1..4 */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; }
+body { font-family: "Nunito", Arial, sans-serif; background: #f7f3ec; color: #1f2530; padding: 110px 90px; display: flex; flex-direction: column; gap: 46px; }
+h1 { font-family: "Quicksand", Arial, sans-serif; font-size: 112px; line-height: 1; letter-spacing: -.01em; }
+.marca { display: flex; align-items: center; gap: 22px; font-family: "Quicksand", Arial, sans-serif; font-weight: 700; font-size: 52px; }
+.marca img { width: 96px; height: 96px; border-radius: 26px; }
+.etq { font-weight: 900; font-size: 32px; letter-spacing: .14em; text-transform: uppercase; }
+.bajada { font-size: 44px; line-height: 1.35; color: #4b5260; }
+.items { display: grid; gap: 22px; }
+.item { background: #fff; border-radius: 40px; padding: 34px 40px; font-size: 40px; font-weight: 800; box-shadow: 0 6px 28px rgba(31,37,48,.08); }
+.item span { display: block; font-weight: 600; font-size: 32px; color: #6b7380; margin-top: 4px; }
+.qr { margin-top: auto; display: grid; grid-template-columns: 330px 1fr; gap: 40px; align-items: center; background: #fff; border-radius: 48px; padding: 36px; }
+.qr img { width: 100%; }
+.qr b { font-size: 46px; display: block; }
+.qr small { font-size: 30px; color: #6b7380; word-break: break-all; }
+</style></head>
+<body>
+<script>
+const n = new URLSearchParams(location.search).get('n') || '1'
+const T = {
+  1: { c: '#f97316', etq: 'App gratis · boulder y roca', h: 'Anota tus rutas. Suma a tu comunidad.', b: 'Registra tus bloques, mira tu progreso y descubre lo que pasa en tu gimnasio y en la roca. Sin rankings: todos suman.',
+       it: [['🧗 Tus días y rutas', 'Por color, con Mono de compañero'], ['🏢 Tu gimnasio adentro', 'Eventos, rutas nuevas y metas'], ['🔒 Tú decides qué compartir', 'Siempre anónimo']], qr: 'app', ql: 'Descarga y prueba', qu: 'escalada-xi.vercel.app' },
+  2: { c: '#e89a0c', etq: 'Para gimnasios', h: 'Tu muro en el bolsillo de tu comunidad', b: 'Tu perfil con tus colores, tus rutas y tus eventos. Y la información para decidir mejor.',
+       it: [['📊 Dashboard claro', 'Rutas que gustan, horas peak, retención'], ['📅 Eventos en un minuto', 'Clases, talleres y competencias'], ['🤝 Metas comunitarias', 'Entre todos llegamos a 2.000 rutas']], qr: 'sitio', ql: 'Primer mes gratis', qu: 'fewiyo.github.io/escalada-plataforma' },
+  3: { c: '#3f7d4e', etq: 'Para fundaciones', h: 'Tu mensaje, justo cuando van a la roca', b: 'Cuando alguien abre un sector, ve tu ficha: estado de las rutas, cómo cuidarlo y cómo ayudar.',
+       it: [['🌿 Estado del sector', 'Al día, revisar o cerrado'], ['🧹 Jornadas', 'Voluntarios que se inscriben desde la app'], ['💚 Buenas prácticas', 'Mono las recuerda antes de escalar']], qr: 'sitio', ql: 'Conversemos', qu: 'fewiyo.github.io/escalada-plataforma' },
+  4: { c: '#1d4ed8', etq: 'Para marcas', h: 'Apoya a quienes escalan', b: 'Patrocina metas comunitarias en los gimnasios que elijas, con premios y cupones. Sin pop-ups.',
+       it: [['🏆 Desafíos patrocinados', 'En los gimnasios que lo aprueben'], ['🎟️ Cupones como premio', 'Mides canjes e inscritos'], ['🔒 Datos agregados', 'Nunca de personas']], qr: 'sitio', ql: 'Hablemos', qu: 'fewiyo.github.io/escalada-plataforma' },
+}[n]
+document.write(`
+  <div class="marca"><img src="../../mono.svg" alt="">Escalada</div>
+  <span class="etq" style="color:${T.c}">${T.etq}</span>
+  <h1>${T.h}</h1>
+  <p class="bajada">${T.b}</p>
+  <div class="items">${T.it.map(([a, s]) => `<div class="item" style="border-left:14px solid ${T.c}">${a}<span>${s}</span></div>`).join('')}</div>
+  <div class="qr"><img src="../qr-${T.qr}.svg" alt=""><div><b>${T.ql}</b><small>${T.qu}</small></div></div>`)
+</script>
+</body></html>

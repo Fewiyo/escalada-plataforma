@@ -1,0 +1,22 @@
+/* Piezas impresas: carta, blanco y negro, sin grises finos que se pierdan en láser. */
+@page { size: letter; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Nunito", Arial, sans-serif; color: #000; background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+h1, h2, h3 { font-family: "Quicksand", "Nunito", Arial, sans-serif; line-height: 1.05; }
+.hoja { width: 8.5in; height: 11in; padding: .6in; display: flex; flex-direction: column; gap: .25in; page-break-after: always; overflow: hidden; }
+.hoja:last-child { page-break-after: auto; }
+.mono { filter: grayscale(1) contrast(1.6); }
+.marca { display: flex; align-items: center; gap: 12px; font-family: "Quicksand", Arial, sans-serif; font-weight: 700; font-size: 22pt; }
+.marca img { width: 54px; height: 54px; border-radius: 14px; border: 2px solid #000; }
+.qrs { display: grid; grid-template-columns: 1fr 1fr; gap: .3in; }
+.qr { border: 3px solid #000; border-radius: 22px; padding: .22in; display: grid; justify-items: center; text-align: center; gap: 8px; }
+.qr img { width: 100%; max-width: 2.6in; }
+.qr b { font-size: 15pt; }
+.qr span { font-size: 10pt; word-break: break-all; }
+.lista { list-style: none; display: grid; gap: 6px; font-size: 12.5pt; }
+.lista li::before { content: "✓  "; font-weight: 900; }
+.no li::before { content: "✕  "; }
+.etq { font-weight: 900; font-size: 9.5pt; letter-spacing: .14em; text-transform: uppercase; }
+.caja { border: 2px solid #000; border-radius: 16px; padding: .18in .22in; display: grid; gap: 6px; }
+.negro { background: #000; color: #fff; border-radius: 18px; padding: .22in; }
+.pie { margin-top: auto; font-size: 9.5pt; display: flex; justify-content: space-between; border-top: 2px solid #000; padding-top: 8px; }

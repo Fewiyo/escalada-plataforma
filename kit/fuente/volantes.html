@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Volantes Escalada</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="imprimir.css">
+<style>
+.hoja { padding: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0; }
+.vol { border: 1px dashed #000; padding: .32in; display: flex; flex-direction: column; gap: 10px; }
+.vol h2 { font-size: 21pt; }
+.vol p { font-size: 10.5pt; }
+.vol .marca { font-size: 14pt; } .vol .marca img { width: 34px; height: 34px; border-radius: 9px; }
+.par { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; }
+.par div { border: 2px solid #000; border-radius: 12px; padding: 8px; display: grid; justify-items: center; text-align: center; gap: 4px; font-size: 8.5pt; font-weight: 800; }
+.par img { width: 100%; }
+</style></head>
+<body>
+<div class="hoja">
+  <!-- Cuatro volantes iguales por hoja; se recortan por la línea punteada. -->
+  <script>
+    const v = `<div class="vol">
+      <div class="marca"><img class="mono" src="../../mono.svg" alt="">Escalada</div>
+      <h2>Anota tus rutas. Suma a tu comunidad.</h2>
+      <p>App gratis para boulder y roca. Gimnasios y fundaciones tienen su propio espacio. Sin rankings: todos suman.</p>
+      <div class="par">
+        <div><img src="../qr-app.svg" alt="">Descarga la app</div>
+        <div><img src="../qr-sitio.svg" alt="">Gimnasios y fundaciones</div>
+      </div>
+    </div>`
+    document.write(v + v + v + v)
+  </script>
+</div>
+</body></html>

@@ -11,9 +11,16 @@ Sitio de venta de **Escalada**, la app donde la gente registra sus rutas de boul
 - **Cuentas claras:** costos de mantener la app y cuántos gimnasios se necesitan para cubrirlos.
 - **Hoja de ruta:** de app web a Google Play y App Store.
 
+## Kit para compartir
+
+En `kit/` están el afiche, los volantes y la presentación en PDF (carta, blanco y negro), cuatro imágenes para el celular y los QR. Las fuentes HTML están en `kit/fuente/`.
+
+## Formulario
+
+El formulario de contacto envía los mensajes por correo con FormSubmit.
+
 ## Pendiente
 
-- Conectar el formulario de contacto a un servicio de formularios (por ejemplo Formspree) y agregar un correo de contacto.
 - Confirmar los precios después del piloto.
 
 ## Publicar
